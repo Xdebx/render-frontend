@@ -5,6 +5,13 @@ import Search from './Search'
 import { useDispatch, useSelector } from 'react-redux'
 // import { useAlert } from 'react-alert'
 import { logout } from '../../actions/userActions'
+import { toast } from "react-toastify";
+
+
+const successMsg = (message = "") =>
+    toast.success(message, {
+        position: toast.POSITION.BOTTOM_CENTER,
+    });
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -14,7 +21,7 @@ const Header = () => {
 
     const logoutHandler = () => {
         dispatch(logout());
-        alert.success('Logged out successfully.')
+        successMsg('Logged out successfully.')
     }
 
     return (
