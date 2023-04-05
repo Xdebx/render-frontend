@@ -15,12 +15,12 @@ const successMsg = (message = "") =>
 
 const Header = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const { cartItems } = useSelector(state => state.cart)
     const { user, loading } = useSelector(state => state.auth)
     // const { cartItems } = useSelector(state => state.cart)
 
     const logoutHandler = () => {
-        const navigate = useNavigate();
         dispatch(logout());
         successMsg('Logged out successfully!!!!!!!')
         navigate("/");
