@@ -60,6 +60,7 @@ export const login = (email, password) => async (dispatch) => {
             headers: {
                 "Content-Type": "application/json",
             },
+            withCredentials:true
         };
 
         const { data } = await axios.post(
@@ -89,6 +90,7 @@ export const register = (userData) => async (dispatch) => {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
+            withCredentials:true
         };
 
         const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/register`, userData, config);
