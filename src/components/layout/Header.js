@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import '../../App.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Search from './Search'
 import { useDispatch, useSelector } from 'react-redux'
 // import { useAlert } from 'react-alert'
@@ -15,7 +15,6 @@ const successMsg = (message = "") =>
 
 const Header = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const { cartItems } = useSelector(state => state.cart)
     const { user, loading } = useSelector(state => state.auth)
     // const { cartItems } = useSelector(state => state.cart)
@@ -23,7 +22,7 @@ const Header = () => {
     const logoutHandler = () => {
         dispatch(logout());
         successMsg('Logged out successfully!!!!!!!')
-        navigate("/");
+        
         
     }
 
