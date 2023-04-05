@@ -71,7 +71,7 @@ const Header = () => {
                                 <Link className="dropdown-item" to="/orders/me">Orders</Link>
                                 <Link className="dropdown-item" to="/me">Profile</Link>
                                 {/*<Link className="dropdown-item text-danger" to="/" onClick={logoutHandler}>*/}
-                                <Link className="dropdown-item text-danger" to="/" onClick={logoutHandler}>
+                                <Link className="dropdown-item text-danger" to="/logout" onClick={logoutHandler}>
                                     Logout
                                 </Link>
                             </div>
