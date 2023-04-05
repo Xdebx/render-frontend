@@ -229,9 +229,11 @@ function App() {
 
       </Routes>
 
-      {!loading && (!isAuthenticated || user.role !== 'admin') && (
+      <Footer />
+
+      {/* {!loading && (!isAuthenticated || user.role !== 'admin') && (
         <Footer />
-      )}
+      )} */}
     </div>
   );
 }
