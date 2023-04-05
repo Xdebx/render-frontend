@@ -229,11 +229,11 @@ function App() {
 
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
 
-      {/* {!loading && (!isAuthenticated || user.role !== 'admin') && (
+      {!loading && (!isAuthenticated || user.role !== 'admin') && (
         <Footer />
-      )} */}
+      )}
     </div>
   );
 }
