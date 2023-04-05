@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react'
 import '../../App.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Search from './Search'
 import { useDispatch, useSelector } from 'react-redux'
 // import { useAlert } from 'react-alert'
 import { logout } from '../../actions/userActions'
 import { toast } from "react-toastify";
 
+const navigate = useNavigate();
 
 const successMsg = (message = "") =>
     toast.success(message, {
@@ -22,6 +23,8 @@ const Header = () => {
     const logoutHandler = () => {
         dispatch(logout());
         successMsg('Logged out successfully!!!!!!!')
+        navigate("/");
+        
     }
 
     return (
@@ -71,7 +74,7 @@ const Header = () => {
                                 <Link className="dropdown-item" to="/orders/me">Orders</Link>
                                 <Link className="dropdown-item" to="/me">Profile</Link>
                                 {/*<Link className="dropdown-item text-danger" to="/" onClick={logoutHandler}>*/}
-                                <Link className="dropdown-item text-danger" to="/logout" onClick={logoutHandler}>
+                                <Link className="dropdown-item text-danger" to="/" onClick={logoutHandler}>
                                     Logout
                                 </Link>
                             </div>
