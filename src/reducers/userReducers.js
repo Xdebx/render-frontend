@@ -87,6 +87,8 @@ export const authReducer = (state = { user: {} }, action) => {
     case LOGOUT_FAIL:
 
       return {
+        
+        ...state,
 
         loading: false,
 
