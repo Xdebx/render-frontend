@@ -21,7 +21,7 @@ const Header = () => {
 
     const logoutHandler = () => {
         dispatch(logout());
-        successMsg('Logged out successfully.')
+        successMsg('Logged out successfully!!!!!!!')
     }
 
     return (
