@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../actions/userActions'
 import { toast } from "react-toastify";
 
-const navigate = useNavigate();
 
 const successMsg = (message = "") =>
     toast.success(message, {
@@ -21,6 +20,7 @@ const Header = () => {
     // const { cartItems } = useSelector(state => state.cart)
 
     const logoutHandler = () => {
+        const navigate = useNavigate();
         dispatch(logout());
         successMsg('Logged out successfully!!!!!!!')
         navigate("/");
