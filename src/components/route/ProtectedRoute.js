@@ -4,9 +4,7 @@ import { useSelector } from 'react-redux'
 import Loader from '../layout/Loader'
 
 
-
 const ProtectedRoute = ({ children, isAdmin = false }) => {
-
 
 
     const { isAuthenticated, loading, user } = useSelector(state => state.auth);
